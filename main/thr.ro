@@ -1,0 +1,13 @@
+
+include('head.ro');
+
+function thr() {
+
+    if (__linux) { // __ is core variable, __linux means if 'use linux;' is enabled (on main file) true.
+        echo('Hello' . ' '); // echo not have to set 'std::endl;' or '\n' in last
+        // '.' like '+'   or ','
+
+        __eval('std::cout << "World" << std::endl;');
+    }
+}
+

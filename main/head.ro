@@ -1,0 +1,3 @@
+
+__phead('#include "head.hpp"'); // push on head (core), like headers
+

@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="kjP1y_VVCjHNRTOQGt1C" name="Page-1">
+        <mxGraphModel dx="774" dy="821" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#E6E6E6" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="Raz Project" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="80" width="588" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Core Transpiler&lt;div&gt;&lt;i&gt;Target: C++&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;Raz Sources to C++, include&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;native C++ headers,&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;compile just main.ro file&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;.ro core -&amp;gt; .rt files&lt;/i&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry x="10" y="33" width="210" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Core Raz Compiler&lt;div&gt;Native Raz Methods,&lt;/div&gt;&lt;div&gt;&lt;span lang=&quot;en&quot; class=&quot;HwtZe&quot;&gt;Method definition like:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span lang=&quot;en&quot; class=&quot;HwtZe&quot;&gt;include, eval, etc.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span lang=&quot;en&quot; class=&quot;HwtZe&quot;&gt;core .rt files compile itself&lt;/span&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry x="208" y="33" width="188" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Raz std libraries,&lt;div&gt;Helpers like:&lt;/div&gt;&lt;div&gt;Auto ptr, Let, etc.&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry x="384" y="33" width="194" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Main&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;Debuger,&lt;/div&gt;&lt;div&gt;Pretty,&lt;/div&gt;&lt;div&gt;Out (Headers),&lt;/div&gt;&lt;div&gt;Build&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="332" y="228" width="124" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,14 @@
+include('thr.ro');
+
+let name = "Ali";
+
+function sec() {
+
+    echo("hello " . name . " ,");
+
+    { // scope
+        let exclamation = "!";
+        let numberValue = 42;
+    }; // end scope
+}
+

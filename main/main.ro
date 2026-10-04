@@ -1,0 +1,51 @@
+// Main Program
+/*
+    Raz lang
+
+---
+
+compiler:
+    نباید شرط های واسط موقع کامپایل و متد های استاندارد داشته باشیم.
+    مثلا:
+    موقع کامپایل نمیخوام بررسی کنیم که خب فایلی که به من میدهی تا کامپایل شود حتمی باید فرمت .ro داشته باشد
+    یا موقع فعال کردن متد __linux بررسی کنیم که سیستمی که برنامه توش اجرا میشود حتمی لینوکس هست.
+    این فقط یک سری متد های منطقی هست.
+    ازادیه منطق توی کامپایل و متد های باید قانون اول باشد.
+    منطق وجود داشته باشد میتوانیم متد هایی با یادگیری و خلق برنامه ها با تفکر عمیق بسازیم.
+*/
+
+use linux; // this is enable some methods for only linux, this is enable __linux variable(const)
+// we don't have to support unix now
+
+include('sec.ro'); // no variable avaliable for save this include file (no need), no export method need for export function on other files
+// standard libraries (core) doesn't need .ro on include
+// include is not parallel, include most run when app complied
+// include موقع اجرای کامپایل باید تمام فانکشن های متد فایل دیگر را در یک هدر خاص قرار دهد و در این فایل قرار دهد.
+// qq هدر برنامه ریزی نشده اما میتواند در یک فایل ساده اصلی ریخته شود با ان نام
+
+// ss, متد include باید عمیق ترین فایل include شده ریشه را پیدا کند و به ترتیب از عمیق ترین به بالا ترین فایل.. فایل ها را کامپایل کند.
+// ss, متد include ممکن هست در بالاترین حالت از فایل اصلی یا فایل های هدر قرار نگیرد.. اما باید در هنگام کامپایل مقادیر ان و متد ها داخل فایل هدر اماده شده باشند.. اما فقط باید متد های ان include خاص در ان scope در دسترس باشد.. پس راه حل هدر جواب نمیدهد.
+// ss, نیازه متد include تک تک فانکشن و همه ی متد های فایل را تماما در ان اسکوپ جایگذاری کند.
+// ss, اما include های حالت بالا میتواند یک هدر باشد.
+// ss, شرطی در هسته نباید جلوی منطقی بودن کامپایل برنامه را بگیرد.. پس چیزی برای بررسی include فایل های مقصد به عنوان واسط قرار نمیگیرد.
+
+
+function main() {
+    sec(); // run function (in included file)
+    echo("hello world");
+} // s فانکشن ها نیازی به ; ندارند. اما میتواند کاربر قرار دهد.
+
+main(); // run function
+
+sleep(1); // sleep is blocking IO, and stop program here
+
+echo("thats my lang"); // print, echo is woring with async (parallel)
+
+(async [](){ // async (parallel) function (auto), block final exit app, no await
+    sleep(10); // sleep in 10s
+    die(); // exit program, die take number (exit code)
+})(); // auto run lambda function
+
+
+
+__e; // this is means, this file is the Main file (top file), and not avaliable on header or include on other files
